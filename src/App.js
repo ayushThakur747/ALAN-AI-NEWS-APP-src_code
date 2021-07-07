@@ -3,10 +3,11 @@ import './App.css';
 import alanBtn from '@alan-ai/alan-sdk-web';
 import wordsToNumbers from 'words-to-numbers';
 import Particles from 'react-particles-js';
-
 import NewsCards from './Component/NewsCards/NewsCards.js';
 
-const alankey= '3e51a20fe72f60cb0955b473e4eab2742e956eca572e1d8b807a3e2338fdd0dc/stage';
+const{REACT_APP_ALAN_KEY} = process.env;
+
+const alankey= REACT_APP_ALAN_KEY;
 
 const particlesOptions = {
   
@@ -21,7 +22,6 @@ const particlesOptions = {
   }
 
 }
-
 
 const App = () => {
 
@@ -59,7 +59,7 @@ const App = () => {
       <Particles className='particles'   
             params={particlesOptions}
           />
-      <h1>|| Alan AI News Application ||</h1>
+      <h1>|| Alan-AI news app ||</h1>
       <NewsCards articles={newsArticles} activeArticle={activeArticle}/>
     </div>
   );

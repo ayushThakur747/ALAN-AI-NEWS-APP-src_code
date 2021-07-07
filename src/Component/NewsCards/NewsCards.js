@@ -62,7 +62,7 @@ const NewsCards = ({articles, activeArticle}) => {
                             <div className={classes.Gcard} style={{background: infoCard.color}}>
                                 <Typography variant="h5">{infoCard.title}</Typography>
                                
-                               {/*condition if we did not gave any command than show home screen  */}
+                              
                                 { infoCard.info 
                                     ? (<Typography varient="h6">
                                             <strong>
